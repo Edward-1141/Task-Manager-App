@@ -1,0 +1,26 @@
+architecture: standalone
+auth:
+  enabled: true
+  existingSecret: redis-password  # This references the secret we created
+  existingSecretPasswordKey: REDIS_PASSWORD  # This is the key in the secret that contains the password
+service:
+  type: ClusterIP
+  port: 6379
+persistence:
+  enabled: false  # For development, we'll disable persistence
+master:
+  resources:
+    requests:
+      memory: "128Mi"
+      cpu: "100m"
+    limits:
+      memory: "256Mi"
+      cpu: "200m"
+replica:
+  resources:
+    requests:
+      memory: "128Mi"
+      cpu: "100m"
+    limits:
+      memory: "256Mi"
+      cpu: "200m" 

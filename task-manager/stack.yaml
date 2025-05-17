@@ -1,0 +1,57 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+
+configuration:
+  copy:
+    - ./shared-lib
+
+functions:
+  users:
+    lang: tmajava21
+    handler: ./users
+    image: edward1141/users:latest
+    environment:
+      redis-host: redis-master.default.svc.cluster.local
+      redis-port: 6379
+    secrets:
+      - db-connection-string
+      - redis-password
+      - auth-secret-key
+
+  auth:
+    lang: tmajava21
+    handler: ./auth
+    image: edward1141/auth:latest
+    environment:
+      redis-host: redis-master.default.svc.cluster.local
+      redis-port: 6379
+    secrets:
+      - db-connection-string
+      - redis-password
+      - auth-secret-key
+
+  projects:
+    lang: tmajava21
+    handler: ./projects
+    image: edward1141/projects:latest
+    environment:
+      redis-host: redis-master.default.svc.cluster.local
+      redis-port: 6379
+    secrets:
+      - db-connection-string
+      - redis-password
+      - auth-secret-key
+
+  tasks:
+    lang: tmajava21
+    handler: ./tasks
+    image: edward1141/tasks:latest
+    environment:
+      redis-host: redis-master.default.svc.cluster.local
+      redis-port: 6379
+    secrets:
+      - db-connection-string
+      - redis-password
+      - auth-secret-key

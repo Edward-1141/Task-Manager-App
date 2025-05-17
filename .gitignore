@@ -1,0 +1,12 @@
+### IntelliJ IDEA ###
+*/.idea/
+*.iws
+*.iml
+*.ipr
+
+### Environment ###
+*.env
+.kube/
+
+### VS Code ###
+.vscode/

@@ -1,0 +1,53 @@
+{
+    "user_id": 1,
+    "projects": [
+        {
+            "id": 1,
+            "name": "E-commerce Website Redesign",
+            "description": "Modernize the company's online store with responsive design and improved user experience",
+            "created_at": "2024-03-13T10:00:00+08:00",
+            "updated_at": "2024-03-13T10:00:00+08:00",
+            "members": [1, 2, 3, 4]
+        },
+        {
+            "id": 2,
+            "name": "Mobile App Development",
+            "description": "Create a cross-platform mobile application for customer service and support",
+            "created_at": "2024-03-14T10:00:00+08:00",
+            "updated_at": "2024-03-15T10:00:00+08:00",
+            "num_members": 2,
+            "num_tasks": 1,
+            "members": [1, 2]
+        },
+        {
+            "id": 3,
+            "name": "Data Analytics Dashboard",
+            "description": "Develop an interactive dashboard for visualizing sales and customer metrics",
+            "created_at": "2024-03-14T10:00:00+08:00",
+            "updated_at": "2024-03-14T10:00:00+08:00",
+            "num_members": 3,
+            "num_tasks": 5,
+            "members": [1, 2, 3]
+        },
+        {
+            "id": 4,
+            "name": "API Integration Project",
+            "description": "Integrate third-party payment and shipping APIs into the existing system",
+            "created_at": "2024-03-14T10:00:00+08:00",
+            "updated_at": "2024-03-14T10:00:00+08:00",
+            "num_members": 4,
+            "num_tasks": 10,
+            "members": [1, 2, 3, 4]
+        },
+        {
+            "id": 5,
+            "name": "Security Infrastructure Upgrade",
+            "description": "Comprehensive overhaul of system security including implementing two-factor authentication, upgrading encryption protocols, conducting security audits, and establishing automated vulnerability scanning across all company applications and services",
+            "created_at": "2024-03-14T10:00:00+08:00",
+            "updated_at": "2024-03-14T10:00:00+08:00",
+            "num_members": 5,
+            "num_tasks": 15,
+            "members": [1, 2, 3, 4, 5]
+        }
+    ]
+}

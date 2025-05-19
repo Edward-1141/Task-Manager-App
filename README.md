@@ -2,6 +2,14 @@
 
 This project is still under development.
 
+## Live Demo
+
+You can play with the application by visiting the following link:
+
+<https://edward1141.xyz/task-manager>
+
+Sometimes the server might be sleeping, so you may need to wait for it to wake up :\)
+
 ## Overview
 
 This project is a task manager application that allows you to manage your tasks for your team.

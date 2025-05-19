@@ -58,7 +58,7 @@ check_command kubectl
 
 # Build with embedded API URL
 docker build \
-  --build-arg NEXT_PUBLIC_API_URL="${CLUSTER_MACHINE_IP}:5051" \
+  --build-arg NEXT_PUBLIC_API_URL="$PUBLIC_API_URL" \
   -t edward1141/tma-frontend-app:latest ./tma-frontend
 
 # push to docker hub

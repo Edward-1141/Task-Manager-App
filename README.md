@@ -24,7 +24,6 @@ We have make use of the following stack:
 - Serverless Backend: OpenFaas with java functions
 - Database: PostgreSQL
 - Caching: Redis
-- API Gateway: Nginx
 
 And all the services can be deployed to kubernetes cluster.
 
@@ -101,8 +100,11 @@ Put the secrets in the `.secrets` folder under the root of the project.
 .env
 
 ```bash
+# For access of openfaas and faas-cli to deploy functions
 CLUSTER_MACHINE_IP=your_cluster_machine_ip
-# The IP needs to be accessible to the browser that accesses the frontend.
+
+# For access of frontend to backend, depends on the kubectl port-forward / nginx proxy
+PUBLIC_API_URL=your_public_api_url
 ```
 
 postgresql-secret.env
@@ -144,13 +146,6 @@ After the deployment, please refer to [this guide](./postgredSQL.md) to setup th
 
 ```bash
 bash scripts/redis_deploy.sh
-```
-
-### Deploy Nginx on kubernetes
-
-```bash
-bash scripts/nginx_deploy.sh
-```
 
 ### Deploy Frontend on kubernetes
 
@@ -170,8 +165,7 @@ bash scripts/openfaas_deploy.sh
 
 ## Access the Task Manager
 
-After the deployment, you can access the task manager by accessing the ip in the browser. The port is 5052.
+After the deployment, you can access the task manager by:
 
-```bash
-http://<CLUSTER_MACHINE_IP>:5052
-```
+- kubectl port-forward for accessing the frontend and backend, or
+- deploy a custom nginx proxy to access the frontend and backend

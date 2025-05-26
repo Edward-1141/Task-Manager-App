@@ -1,0 +1,5 @@
+.defaultText {
+    /* This is a temporary fix to make the text color consistent since now only supports one fixed theme */
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+}

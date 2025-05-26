@@ -13,9 +13,11 @@ export default function RootLayout({
   return (
     <UserProvider>
       <UserProjectsProvider>
-        <TopNavBar />
-        <main className="container px-4 sm:px-6 lg:px-8 pt-30 flex-1">
-          {children}
+        <main className="flex flex-col min-h-screen bg-white">
+          <TopNavBar />
+          <div className="flex-1 p-15 pt-30">
+            {children}
+          </div>
         </main>
       </UserProjectsProvider>
     </UserProvider>

@@ -55,10 +55,11 @@ export default function Page() {
             </div>
         );
     } else {
+        // align the cards to the left
         body = (
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 max-w-[2000px]">
                 {userProjects.projects.map((project) => (
-                    <div key={project.id} className="w-full md:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.75rem)]">
+                    <div key={project.id}>
                         <ProjectCard project={project} />
                     </div>
                 ))}
@@ -67,7 +68,7 @@ export default function Page() {
     }
 
     return (
-        <div className="w-full px-2 sm:px-3 lg:px-4 py-6">
+        <>
             <div className="flex items-center justify-between mb-6">
                 <div>
                     <h1 className="text-4xl font-bold text-gray-900">Your Workspace</h1>
@@ -80,7 +81,8 @@ export default function Page() {
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
                     </svg>
-                    New Project
+                    <span className="hidden sm:inline">New Project</span>
+                    <span className="sm:hidden"></span>
                 </button>
             </div>
             <div className="border-b border-gray-200 mb-6"></div>
@@ -93,6 +95,6 @@ export default function Page() {
                     onSubmit={handleCreateProject}
                 />
             )}
-        </div>
+        </>
     )
 }

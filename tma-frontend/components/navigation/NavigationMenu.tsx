@@ -8,7 +8,7 @@ const NavigationMenu = () => {
     const pathname = usePathname()
 
     return (
-        <div className="flex items-center space-x-8 font-bold">
+        <div className="flex items-center space-x-8 font-bold h-20">
             <Link
                 href="/task-manager/your-workspace"
                 className={`${styles.navLink} ${

@@ -30,7 +30,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
     return (
         <div 
             onClick={() => router.push(`/task-manager/projects/${project.id}`)}
-            className={`${styles.card} group relative overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-[280px] w-full z-0`}
+            className={`${styles.card} group relative overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-[280px] w-full z-0 sm:w-[300px] md:w-[400px] lg:w-[500px]`}
         >
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <div className="relative z-10 h-full flex flex-col">

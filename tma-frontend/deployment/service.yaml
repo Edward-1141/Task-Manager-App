@@ -7,6 +7,6 @@ spec:
     app: tma-frontend
   ports:
     - protocol: TCP
-      port: 5052
+      port: 3000
       targetPort: 3000
-  type: LoadBalancer 
+  type: ClusterIP 
